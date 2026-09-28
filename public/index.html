@@ -1,0 +1,2261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="أكاديمية عائشة الذكية - منصة تعلم مخصصة للسنة الأولى ثانوي جذع مشترك علوم وتكنولوجيا وفق البرنامج الجزائري."
+        <button
+          type="button"
+          class="nav-button"
+          data-view="sources"
+          id="sourcesButton"
+          hidden
+        >
+          📚 المصادر
+        </button>
+
+  <!-- =========================
+       CSS
+  ========================== -->
+  <link
+    rel="stylesheet"
+    href="./css/academy.css"
+  >
+
+  <!-- =========================
+       MathJax
+       لعرض الصيغ الرياضية
+  ========================== -->
+  <script>
+              <button
+                type="button"
+                class="tool-button"
+                id="workspaceSourcesButton"
+                hidden
+              >
+                📚
+                <span>
+                  مصادر الدرس
+                </span>
+              </button>
+      },
+      svg: {
+        fontCache: "global"
+      }
+    };
+  </script>
+
+  <script
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+
+<body>
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
+  <header class="academy-header">
+
+    <div class="header-inner">
+
+      <div class="academy-brand">
+
+        <div class="brand-icon">
+          🎓
+        </div>
+
+        <div class="brand-text">
+          <h1>أكاديمية عائشة الذكية</h1>
+          <p>
+            السنة الأولى ثانوي — جذع مشترك علوم وتكنولوجيا
+          </p>
+        </div>
+
+      </div>
+
+      <nav
+        class="main-navigation"
+        aria-label="التنقل الرئيسي"
+      >
+
+        <button
+          type="button"
+          class="nav-button active"
+          data-view="home"
+          id="homeButton"
+        >
+          🏠 الرئيسية
+        </button>
+
+        <button
+          type="button"
+          class="nav-button"
+          data-view="schedule"
+          id="scheduleButton"
+        >
+          📅 برنامج اليوم
+        </button>
+
+        <button
+          type="button"
+          class="nav-button"
+          data-view="progress"
+          id="progressButton"
+        >
+          📊 التقدم
+        </button>
+
+        <button
+          type="button"
+          class="nav-button"
+          data-view="sources"
+          id="sourcesButton"
+        >
+          📚 المصادر
+        </button>
+
+      </nav>
+
+      <div class="header-actions">
+
+        <button
+          type="button"
+          class="icon-button"
+          id="calculatorButton"
+          title="الآلة الحاسبة"
+          aria-label="الآلة الحاسبة"
+        >
+          🧮
+        </button>
+
+        <button
+          type="button"
+          class="icon-button"
+          id="geogebraButton"
+          title="مختبر الدوال"
+          aria-label="مختبر الدوال"
+        >
+          📐
+        </button>
+
+        <button
+          type="button"
+          class="icon-button"
+          id="adminButton"
+          title="إدارة الأكاديمية"
+          aria-label="إدارة الأكاديمية"
+        >
+          ⚙️
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN
+  ====================================================== -->
+
+  <main class="academy-main">
+
+    <!-- ===================================================
+         HOME VIEW
+    ==================================================== -->
+
+    <section
+      id="homeView"
+      class="academy-view"
+      data-view-section="home"
+    >
+
+      <!-- Welcome -->
+
+      <section class="welcome-card">
+
+        <div class="welcome-content">
+
+          <div class="welcome-text">
+
+            <span class="welcome-label">
+              👋 مرحبًا بك
+            </span>
+
+            <h2>
+              ماذا سنتعلم اليوم؟
+            </h2>
+
+            <p>
+              اختار(ي) المادة التي تريد(ين) مراجعتها،
+              وسننتقل خطوة بخطوة من الفهم إلى التطبيق ثم الإتقان.
+            </p>
+
+            <div class="learning-cycle">
+
+              <span>فهم</span>
+              <span>←</span>
+              <span>استرجاع</span>
+              <span>←</span>
+              <span>تطبيق</span>
+              <span>←</span>
+              <span>تصحيح</span>
+              <span>←</span>
+              <span>إتقان</span>
+
+            </div>
+
+          </div>
+
+          <div class="welcome-mascot">
+            🧑‍🎓
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           SUBJECTS
+      ================================================== -->
+
+      <section class="content-section">
+
+        <div class="section-heading">
+
+          <div>
+            <span class="section-kicker">
+              موادك الدراسية
+            </span>
+
+            <h2>
+              اختار(ي) المادة
+            </h2>
+          </div>
+
+          <span
+            class="section-status"
+            id="subjectsStatus"
+          >
+            4 مواد
+          </span>
+
+        </div>
+
+
+        <div
+          class="subjects-grid"
+          id="subjectsGrid"
+        >
+
+          <!-- Mathematics -->
+
+          <article
+            class="subject-card mathematics-card"
+            data-subject="mathematics"
+            tabindex="0"
+            role="button"
+            aria-label="فتح مادة الرياضيات"
+          >
+
+            <div class="subject-icon">
+              ∑
+            </div>
+
+            <div class="subject-content">
+
+              <h3>
+                الرياضيات
+              </h3>
+
+              <p>
+                الأعداد، الدوال، الهندسة، الحساب والجبر
+              </p>
+
+              <div class="subject-meta">
+
+                <span>
+                  📘 دروس
+                </span>
+
+                <span>
+                  ✏️ تمارين
+                </span>
+
+                <span>
+                  📊 إتقان
+                </span>
+
+              </div>
+
+            </div>
+
+            <span class="subject-arrow">
+              ←
+            </span>
+
+          </article>
+
+
+          <!-- Physics -->
+
+          <article
+            class="subject-card physics-card"
+            data-subject="physics"
+            tabindex="0"
+            role="button"
+            aria-label="فتح مادة الفيزياء"
+          >
+
+            <div class="subject-icon">
+              ⚛️
+            </div>
+
+            <div class="subject-content">
+
+              <h3>
+                الفيزياء
+              </h3>
+
+              <p>
+                المادة، الحركة، القوى، التحولات والطاقة
+              </p>
+
+              <div class="subject-meta">
+
+                <span>
+                  📘 دروس
+                </span>
+
+                <span>
+                  🧪 تطبيقات
+                </span>
+
+                <span>
+                  📊 إتقان
+                </span>
+
+              </div>
+
+            </div>
+
+            <span class="subject-arrow">
+              ←
+            </span>
+
+          </article>
+
+
+          <!-- Natural Sciences -->
+
+          <article
+            class="subject-card biology-card"
+            data-subject="biology"
+            tabindex="0"
+            role="button"
+            aria-label="فتح مادة علوم الطبيعة والحياة"
+          >
+
+            <div class="subject-icon">
+              🧬
+            </div>
+
+            <div class="subject-content">
+
+              <h3>
+                علوم الطبيعة والحياة
+              </h3>
+
+              <p>
+                الخلية، الكائنات الحية، الوظائف والعلاقات البيئية
+              </p>
+
+              <div class="subject-meta">
+
+                <span>
+                  📘 دروس
+                </span>
+
+                <span>
+                  🔬 تطبيقات
+                </span>
+
+                <span>
+                  📊 إتقان
+                </span>
+
+              </div>
+
+            </div>
+
+            <span class="subject-arrow">
+              ←
+            </span>
+
+          </article>
+
+
+          <!-- English -->
+
+          <article
+            class="subject-card english-card"
+            data-subject="english"
+            tabindex="0"
+            role="button"
+            aria-label="فتح مادة اللغة الإنجليزية"
+          >
+
+            <div class="subject-icon">
+              🇬🇧
+            </div>
+
+            <div class="subject-content">
+
+              <h3>
+                اللغة الإنجليزية
+              </h3>
+
+              <p>
+                الاستماع، المفردات، القواعد، النطق والتواصل
+              </p>
+
+              <div class="subject-meta">
+
+                <span>
+                  🎧 Listening
+                </span>
+
+                <span>
+                  🗣️ Speaking
+                </span>
+
+                <span>
+                  ✍️ Writing
+                </span>
+
+              </div>
+
+            </div>
+
+            <span class="subject-arrow">
+              ←
+            </span>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           TODAY PLAN
+      ================================================== -->
+
+      <section class="content-section">
+
+        <div class="section-heading">
+
+          <div>
+            <span class="section-kicker">
+              خطة اليوم
+            </span>
+
+            <h2>
+              جلسة التعلم اليومية
+            </h2>
+          </div>
+
+        </div>
+
+
+        <div class="daily-plan">
+
+          <article class="plan-step">
+
+            <div class="plan-number">
+              1
+            </div>
+
+            <div>
+              <h3>
+                تثبيت درس اليوم
+              </h3>
+
+              <p>
+                فهم الأفكار والمفاهيم الأساسية التي درستِها اليوم.
+              </p>
+            </div>
+
+            <span class="plan-time">
+              60 د
+            </span>
+
+          </article>
+
+
+          <article class="plan-step">
+
+            <div class="plan-number">
+              2
+            </div>
+
+            <div>
+              <h3>
+                تمارين وتطبيقات
+              </h3>
+
+              <p>
+                تطبيق المفاهيم واكتشاف الأخطاء ومعالجتها.
+              </p>
+            </div>
+
+            <span class="plan-time">
+              60 د
+            </span>
+
+          </article>
+
+
+          <article class="plan-step">
+
+            <div class="plan-number">
+              3
+            </div>
+
+            <div>
+              <h3>
+                التحضير لدرس الغد
+              </h3>
+
+              <p>
+                بناء تصور أولي يساعد على فهم الدرس القادم.
+              </p>
+            </div>
+
+            <span class="plan-time">
+              60 د
+            </span>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           SMART TUTOR
+      ================================================== -->
+
+      <section class="smart-tutor-card">
+
+        <div class="smart-tutor-icon">
+          🤖
+        </div>
+
+        <div class="smart-tutor-content">
+
+          <span class="smart-label">
+            الأستاذ الذكي
+          </span>
+
+          <h2>
+            تعلم قائم على مصادر الأكاديمية
+          </h2>
+
+          <p>
+            يساعدك الأستاذ الذكي على الفهم والاسترجاع والتطبيق،
+            ويستخدم المصادر التي أضافها المشرف إلى الأكاديمية.
+          </p>
+
+          <p class="small-note">
+            لا يخترع معلومات خارج المصادر عند توفر مصدر مرتبط بالسؤال،
+            ويقودك إلى الحل بدل إعطائك الإجابة مباشرة.
+          </p>
+
+        </div>
+
+        <button
+          type="button"
+          class="primary-button"
+          id="openTutorButton"
+        >
+          ابدأ التعلم
+        </button>
+
+      </section>
+
+    </section>
+
+
+    <!-- ===================================================
+         SUBJECT SECTIONS VIEW
+    ==================================================== -->
+
+    <section
+      id="sectionsView"
+      class="academy-view"
+      data-view-section="sections"
+      hidden
+    >
+
+      <div class="page-header">
+
+        <button
+          type="button"
+          class="back-button"
+          id="backToHomeFromSections"
+        >
+          → الرئيسية
+        </button>
+
+        <div>
+
+          <span
+            class="section-kicker"
+            id="selectedSubjectLabel"
+          >
+            المادة
+          </span>
+
+          <h2 id="selectedSubjectTitle">
+            وحدات المادة
+          </h2>
+
+          <p id="selectedSubjectDescription">
+            اختر الوحدة التي تريد دراستها.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="sections-grid"
+        id="sectionsGrid"
+      >
+        <!-- يتم إنشاء الوحدات بواسطة app.js -->
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         UNITS VIEW
+    ==================================================== -->
+
+    <section
+      id="unitsView"
+      class="academy-view"
+      data-view-section="units"
+      hidden
+    >
+
+      <div class="page-header">
+
+        <button
+          type="button"
+          class="back-button"
+          id="backToSectionsButton"
+        >
+          → الوحدات
+        </button>
+
+        <div>
+
+          <span
+            class="section-kicker"
+            id="selectedSectionLabel"
+          >
+            الوحدة
+          </span>
+
+          <h2 id="selectedSectionTitle">
+            الدروس
+          </h2>
+
+          <p id="selectedSectionDescription">
+            اختر الدرس الذي تريد دراسته.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="units-list"
+        id="unitsList"
+      >
+        <!-- يتم إنشاء الدروس بواسطة app.js -->
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         WORKSPACE VIEW
+    ==================================================== -->
+
+    <section
+      id="workspaceView"
+      class="academy-view"
+      data-view-section="workspace"
+      hidden
+    >
+
+      <div class="workspace-header">
+
+        <button
+          type="button"
+          class="back-button"
+          id="backFromWorkspace"
+        >
+          → رجوع
+        </button>
+
+        <div class="workspace-title">
+
+          <span
+            class="section-kicker"
+            id="workspaceSubject"
+          >
+            الرياضيات
+          </span>
+
+          <h2 id="workspaceLessonTitle">
+            عنوان الدرس
+          </h2>
+
+        </div>
+
+        <div
+          class="mastery-badge"
+          id="workspaceMasteryBadge"
+        >
+          مستوى الإتقان: —
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           LEARNING WORKSPACE
+      ================================================== -->
+
+      <div class="workspace-grid">
+
+        <!-- Main content -->
+
+        <div class="workspace-main">
+
+          <!-- Lesson -->
+
+          <article class="lesson-panel">
+
+            <div class="panel-header">
+
+              <div>
+                <span class="panel-kicker">
+                  📖 الفهم
+                </span>
+
+                <h3>
+                  محتوى الدرس
+                </h3>
+              </div>
+
+              <span
+                id="lessonSourceStatus"
+                class="source-status"
+              >
+                المصدر: —
+              </span>
+
+            </div>
+
+            <div
+              id="lessonContent"
+              class="lesson-content"
+            >
+
+              <div class="empty-state">
+
+                <div class="empty-state-icon">
+                  📚
+                </div>
+
+                <h3>
+                  لم يتم اختيار درس بعد
+                </h3>
+
+                <p>
+                  اختر درسًا من القائمة لعرض محتواه.
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- AI Tutor -->
+
+          <article class="tutor-panel">
+
+            <div class="panel-header">
+
+              <div>
+                <span class="panel-kicker">
+                  🤖 الأستاذ الذكي
+                </span>
+
+                <h3>
+                  اسألي عن الدرس
+                </h3>
+              </div>
+
+              <div class="tutor-panel-actions">
+                <button
+                  type="button"
+                  class="speech-toggle"
+                  id="tutorMuteButton"
+                  aria-pressed="false"
+                  aria-label="تشغيل صوت الأستاذ"
+                >
+                  🔊 الصوت
+                </button>
+
+                <span class="tutor-status">
+                  جاهز
+                </span>
+              </div>
+
+            </div>
+
+
+            <div
+              id="tutorMessages"
+              class="tutor-messages"
+              aria-live="polite"
+            >
+
+              <div class="tutor-message tutor-message-ai">
+
+                <div class="message-avatar">
+                  🤖
+                </div>
+
+                <div class="message-body">
+
+                  <button
+                    type="button"
+                    class="message-speak-button"
+                    data-speak-message
+                    aria-label="الاستماع إلى رد الأستاذ"
+                  >
+                    🔊 استمع
+                  </button>
+
+                  <strong>
+                    الأستاذ الذكي
+                  </strong>
+
+                  <p class="message-text">
+                    اطرحي سؤالًا متعلقًا بالدرس.
+                    سأساعدك على الوصول إلى الإجابة خطوة بخطوة.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <form
+              id="tutorForm"
+              class="tutor-form"
+            >
+
+              <textarea
+                id="tutorInput"
+                name="question"
+                rows="3"
+                maxlength="4000"
+                placeholder="اكتبي سؤالك هنا..."
+                aria-label="سؤال للأستاذ الذكي"
+              ></textarea>
+
+              <div class="tutor-form-actions">
+
+                <label
+                  for="studentFileInput"
+                  class="secondary-button file-button"
+                >
+                  📎 إرفاق
+                </label>
+
+                <input
+                  id="studentFileInput"
+                  type="file"
+                  accept=".pdf,.txt,.png,.jpg,.jpeg,.webp"
+                  hidden
+                >
+
+                <button
+                  type="submit"
+                  class="primary-button"
+                  id="sendTutorButton"
+                >
+                  إرسال السؤال
+                </button>
+
+              </div>
+
+            </form>
+
+          </article>
+
+
+          <!-- Exercises -->
+
+          <article class="exercise-panel">
+
+            <div class="panel-header">
+
+              <div>
+                <span class="panel-kicker">
+                  ✏️ التطبيق
+                </span>
+
+                <h3>
+                  تمارين الدرس
+                </h3>
+              </div>
+
+              <span
+                id="exerciseLevel"
+                class="difficulty-badge"
+              >
+                —
+              </span>
+
+            </div>
+
+            <div
+              id="exerciseContainer"
+              class="exercise-container"
+            >
+
+              <div class="empty-state">
+
+                <div class="empty-state-icon">
+                  ✏️
+                </div>
+
+                <h3>
+                  التمارين ستظهر هنا
+                </h3>
+
+                <p>
+                  بعد اختيار الدرس، يمكنك بدء التمرين.
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <!-- Sidebar -->
+
+        <aside class="workspace-sidebar">
+
+          <!-- Learning cycle -->
+
+          <div class="sidebar-card">
+
+            <div class="sidebar-card-header">
+              <h3>
+                🔄 دورة التعلم
+              </h3>
+            </div>
+
+            <ol
+              class="learning-cycle-list"
+              id="learningCycleList"
+            >
+
+              <li class="cycle-item active">
+                <span>1</span>
+                <div>
+                  <strong>افهم</strong>
+                  <small>بناء الفكرة</small>
+                </div>
+              </li>
+
+              <li class="cycle-item">
+                <span>2</span>
+                <div>
+                  <strong>استرجع</strong>
+                  <small>اختبر ذاكرتك</small>
+                </div>
+              </li>
+
+              <li class="cycle-item">
+                <span>3</span>
+                <div>
+                  <strong>طبّق</strong>
+                  <small>حل التمارين</small>
+                </div>
+              </li>
+
+              <li class="cycle-item">
+                <span>4</span>
+                <div>
+                  <strong>صحّح</strong>
+                  <small>اكتشف الخطأ</small>
+                </div>
+              </li>
+
+              <li class="cycle-item">
+                <span>5</span>
+                <div>
+                  <strong>أتقن</strong>
+                  <small>تحقق من الفهم</small>
+                </div>
+              </li>
+
+            </ol>
+
+          </div>
+
+
+          <!-- Progress -->
+
+          <div class="sidebar-card">
+
+            <div class="sidebar-card-header">
+
+              <h3>
+                📊 التقدم
+              </h3>
+
+            </div>
+
+            <div class="progress-ring-container">
+
+              <div
+                class="progress-ring"
+                id="lessonProgressRing"
+                style="--progress: 0%;"
+              >
+                <span id="lessonProgressValue">
+                  0%
+                </span>
+              </div>
+
+            </div>
+
+            <p
+              class="progress-caption"
+              id="lessonProgressCaption"
+            >
+              لم يبدأ التقييم بعد
+            </p>
+
+          </div>
+
+
+          <!-- Quick tools -->
+
+          <div class="sidebar-card">
+
+            <div class="sidebar-card-header">
+
+              ###
+              <h3>
+                🛠️ أدوات التعلم
+              </h3>
+
+            </div>
+
+            <div class="quick-tools">
+
+              <button
+                type="button"
+                class="tool-button"
+                id="workspaceCalculatorButton"
+              >
+                🧮
+                <span>
+                  الآلة الحاسبة
+                </span>
+              </button>
+
+              <button
+                type="button"
+                class="tool-button"
+                id="workspaceGeoGebraButton"
+              >
+                📐
+                <span>
+                  مختبر الدوال
+                </span>
+              </button>
+
+              <button
+                type="button"
+                class="tool-button"
+                id="workspaceSourcesButton"
+              >
+                📚
+                <span>
+                  مصادر الدرس
+                </span>
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- Mastery action -->
+
+          <div class="mastery-action-card">
+
+            <span class="mastery-action-icon">
+              🎯
+            </span>
+
+            <h3>
+              هل أصبحتِ مستعدة للاختبار؟
+            </h3>
+
+            <p>
+              لا يعتبر الدرس متقنًا بمجرد فتحه.
+              يجب إثبات الفهم من خلال التقييم.
+            </p>
+
+            <button
+              type="button"
+              class="primary-button full-width"
+              id="startMasteryTestButton"
+            >
+              ابدأ اختبار الإتقان
+            </button>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         SCHEDULE VIEW
+    ==================================================== -->
+
+    <section
+      id="scheduleView"
+      class="academy-view"
+      data-view-section="schedule"
+      hidden
+    >
+
+      <div class="page-header">
+
+        <div>
+
+          <span class="section-kicker">
+            📅 التنظيم
+          </span>
+
+          <h2>
+            برنامج التعلم اليومي
+          </h2>
+
+          <p>
+            خطة المراجعة مرتبطة بما درسته اليوم وما ستدرسه غدًا.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        id="scheduleContainer"
+        class="schedule-container"
+      >
+
+        <div class="schedule-placeholder">
+
+          <div>
+            📅
+          </div>
+
+          <h3>
+            لم تتم إضافة برنامج اليوم بعد
+          </h3>
+
+          <p>
+            سيتم ربط هذه الصفحة بجدول الدراسة والبرنامج الأسبوعي.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         PROGRESS VIEW
+    ==================================================== -->
+
+    <section
+      id="progressView"
+      class="academy-view"
+      data-view-section="progress"
+      hidden
+    >
+
+      <div class="page-header">
+
+        <div>
+
+          <span class="section-kicker">
+            📊 القياس
+          </span>
+
+          <h2>
+            لوحة التقدم
+          </h2>
+
+          <p>
+            التقدم الحقيقي يعتمد على مستوى الإتقان وليس مجرد إتمام الدروس.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="progress-dashboard">
+
+        <article class="progress-summary-card">
+
+          <span class="progress-summary-icon">
+            🎯
+          </span>
+
+          <div>
+
+            <span>
+              متوسط الإتقان
+            </span>
+
+            <strong id="overallMastery">
+              —
+            </strong>
+
+          </div>
+
+        </article>
+
+
+        <article class="progress-summary-card">
+
+          <span class="progress-summary-icon">
+            📚
+          </span>
+
+          <div>
+
+            <span>
+              الدروس المدروسة
+            </span>
+
+            <strong id="studiedLessons">
+              0
+            </strong>
+
+          </div>
+
+        </article>
+
+
+        <article class="progress-summary-card">
+
+          <span class="progress-summary-icon">
+            ✏️
+          </span>
+
+          <div>
+
+            <span>
+              التمارين
+            </span>
+
+            <strong id="solvedExercises">
+              0
+            </strong>
+
+          </div>
+
+        </article>
+
+
+        <article class="progress-summary-card">
+
+          <span class="progress-summary-icon">
+            🔁
+          </span>
+
+          <div>
+
+            <span>
+              جلسات المراجعة
+            </span>
+
+            <strong id="reviewSessions">
+              0
+            </strong>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+      <div
+        class="subject-progress-grid"
+        id="subjectProgressGrid"
+      >
+        <!-- يتم إنشاؤها بواسطة app.js -->
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         SOURCES VIEW
+    ==================================================== -->
+
+    <section
+      id="sourcesView"
+      class="academy-view"
+      data-view-section="sources"
+      hidden
+    >
+
+      <div class="page-header">
+
+        <div>
+
+          <span class="section-kicker">
+            📚 قاعدة المعرفة
+          </span>
+
+          <h2>
+            مصادر الأكاديمية
+          </h2>
+
+          <p>
+            الكتب والوثائق التي يعتمد عليها الأستاذ الذكي.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="sources-toolbar"
+      >
+
+        <div class="source-info-box">
+
+          <strong>
+            مبدأ الأكاديمية
+          </strong>
+
+          <p>
+            المصدر الرسمي أو الوثيقة التي يضيفها المشرف
+            هي المرجع الأساسي عند الإجابة عن الأسئلة الدراسية.
+          </p>
+
+        </div>
+
+        <button
+          type="button"
+          class="secondary-button"
+          id="refreshSourcesButton"
+        >
+          🔄 تحديث المصادر
+        </button>
+
+      </div>
+
+
+      <div
+        class="sources-list"
+        id="sourcesList"
+      >
+
+        <div class="empty-state">
+
+          <div class="empty-state-icon">
+            📚
+          </div>
+
+          <h3>
+            لا توجد مصادر محملة بعد
+          </h3>
+
+          <p>
+            يمكن للمشرف إضافة الكتب والوثائق من لوحة الإدارة.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FLOATING MASCOT
+  ====================================================== -->
+
+  <div
+    class="floating-mascot"
+    id="floatingMascot"
+    hidden
+    aria-hidden="true"
+  >
+    <div class="mascot-bubble">
+      أنا معك خطوة بخطوة 🌱
+    </div>
+
+    <div class="mascot-avatar">
+      <div class="mascot-figure">
+        <img class="einstein-photo" src="./assets/einstein.jfif" alt="العالم أينشتاين" />
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =====================================================
+       CALCULATOR MODAL
+  ====================================================== -->
+
+  <div
+    id="calculatorModal"
+    class="modal-overlay"
+    hidden
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="calculatorTitle"
+  >
+
+    <div class="modal-window calculator-window">
+
+      <div class="modal-header">
+
+        <div>
+
+          <span class="modal-kicker">
+            🧮 أداة التعلم
+          </span>
+
+          <h2 id="calculatorTitle">
+            الآلة الحاسبة العلمية
+          </h2>
+
+        </div>
+
+        <button
+          type="button"
+          class="modal-close"
+          id="closeCalculatorButton"
+          aria-label="إغلاق"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <div class="calculator-body">
+
+        <div
+          id="calculatorDisplay"
+          class="calculator-display"
+        >
+          0
+        </div>
+
+        <div class="calculator-mode">
+
+          <button
+            type="button"
+            class="calculator-mode-button active"
+            data-calc-mode="degree"
+          >
+            DEG
+          </button>
+
+          <button
+            type="button"
+            class="calculator-mode-button"
+            data-calc-mode="radian"
+          >
+            RAD
+          </button>
+
+        </div>
+
+
+        <div
+          class="calculator-grid"
+          id="calculatorGrid"
+        >
+
+          <button data-calc="clear">AC</button>
+          <button data-calc="delete">⌫</button>
+          <button data-calc="open">(</button>
+          <button data-calc="close">)</button>
+
+          <button data-calc="sin">sin</button>
+          <button data-calc="cos">cos</button>
+          <button data-calc="tan">tan</button>
+          <button data-calc="divide">÷</button>
+
+          <button data-calc="7">7</button>
+          <button data-calc="8">8</button>
+          <button data-calc="9">9</button>
+          <button data-calc="multiply">×</button>
+
+          <button data-calc="4">4</button>
+          <button data-calc="5">5</button>
+          <button data-calc="6">6</button>
+          <button data-calc="subtract">−</button>
+
+          <button data-calc="1">1</button>
+          <button data-calc="2">2</button>
+          <button data-calc="3">3</button>
+          <button data-calc="add">+</button>
+
+          <button data-calc="0">0</button>
+          <button data-calc="decimal">.</button>
+          <button data-calc="sqrt">√</button>
+          <button
+            data-calc="equals"
+            class="calculator-equals"
+          >
+            =
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       GEOGEBRA MODAL
+  ====================================================== -->
+
+  <div
+    id="geogebraModal"
+    class="modal-overlay"
+    hidden
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="geogebraTitle"
+  >
+
+    <div class="modal-window geogebra-window">
+
+      <div class="modal-header">
+
+        <div>
+
+          <span class="modal-kicker">
+            📐 مختبر الرياضيات
+          </span>
+
+          <h2 id="geogebraTitle">
+            GeoGebra
+          </h2>
+
+        </div>
+
+        <button
+          type="button"
+          class="modal-close"
+          id="closeGeoGebraButton"
+          aria-label="إغلاق"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <div class="geogebra-toolbar">
+
+        <p>
+          استخدمي المختبر لاستكشاف التمثيلات البيانية
+          والعلاقات الرياضية بصورة تفاعلية.
+        </p>
+
+        <a
+          href="https://www.geogebra.org/classic"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="secondary-button"
+        >
+          فتح GeoGebra
+        </a>
+
+      </div>
+
+
+      <div class="geogebra-frame-container">
+
+        <iframe
+          id="geogebraFrame"
+          title="مختبر GeoGebra"
+          src="about:blank"
+          loading="lazy"
+          allowfullscreen
+        ></iframe>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       ADMIN MODAL
+  ====================================================== -->
+
+  <div
+    id="adminModal"
+    class="modal-overlay"
+    hidden
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="adminTitle"
+  >
+
+    <div class="modal-window admin-window">
+
+      <div class="modal-header">
+
+        <div>
+
+          <span class="modal-kicker">
+            ⚙️ الإدارة
+          </span>
+
+          <h2 id="adminTitle">
+            إدارة الأكاديمية
+          </h2>
+
+        </div>
+
+        <button
+          type="button"
+          class="modal-close"
+          id="closeAdminButton"
+          aria-label="إغلاق"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <!-- Login -->
+
+      <div
+        id="adminLoginPanel"
+        class="admin-login-panel"
+      >
+
+        <div class="admin-lock-icon">
+          🔐
+        </div>
+
+        <h3>
+          دخول المشرف
+        </h3>
+
+        <p>
+          هذه المنطقة مخصصة لإدارة مصادر الأكاديمية.
+        </p>
+
+        <form id="adminLoginForm">
+
+          <label for="adminPassword">
+            كلمة المرور
+          </label>
+
+          <input
+            id="adminPassword"
+            type="password"
+            autocomplete="current-password"
+            placeholder="أدخل كلمة المرور"
+          >
+
+          <button
+            type="submit"
+            class="primary-button full-width"
+          >
+            دخول
+          </button>
+
+        </form>
+
+        <p
+          id="adminLoginError"
+          class="form-error"
+          hidden
+        ></p>
+
+      </div>
+
+
+      <!-- Admin dashboard -->
+
+      <div
+        id="adminDashboard"
+        class="admin-dashboard"
+        hidden
+      >
+
+        <div class="admin-tabs">
+
+          <button
+            type="button"
+            class="admin-tab active"
+            data-admin-tab="sources"
+          >
+            📚 المصادر
+          </button>
+
+          <button
+            type="button"
+            class="admin-tab"
+            data-admin-tab="curriculum"
+          >
+            🗂️ المنهج
+          </button>
+
+          <button
+            type="button"
+            class="admin-tab"
+            data-admin-tab="settings"
+          >
+            ⚙️ الإعدادات
+          </button>
+
+        </div>
+
+
+        <!-- Sources management -->
+
+        <div
+          class="admin-tab-panel active"
+          data-admin-panel="sources"
+        >
+
+          <div class="admin-panel-heading">
+
+            <div>
+
+              <h3>
+                إضافة مصدر
+              </h3>
+
+              <p>
+                أضف كتابًا أو وثيقة تعتمد عليها الأكاديمية.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <form
+            id="sourceUploadForm"
+            class="source-upload-form"
+          >
+
+            <label
+              for="sourceFileInput"
+              class="upload-dropzone"
+              id="sourceDropzone"
+            >
+
+              <span class="upload-icon">
+                📄
+              </span>
+
+              <strong>
+                اختر ملف المصدر
+              </strong>
+
+              <small>
+                صور، فيديو، مستندات أو أي ملف آخر
+              </small>
+
+            </label>
+
+            <input
+              id="sourceFileInput"
+              type="file"
+              accept="*/*"
+              hidden
+            >
+
+            <div class="form-group">
+              <label for="sourceUrl">
+                أو رابط موقع مفتوح
+              </label>
+
+              <input
+                id="sourceUrl"
+                type="url"
+                placeholder="https://example.org/lesson"
+              >
+            </div>
+
+
+            <div class="source-metadata-grid">
+
+              <div class="form-group">
+
+                <label for="sourceSubject">
+                  المادة
+                </label>
+
+                <select id="sourceSubject">
+
+                  <option value="mathematics">
+                    الرياضيات
+                  </option>
+
+                  <option value="physics">
+                    الفيزياء
+                  </option>
+
+                  <option value="biology">
+                    علوم الطبيعة والحياة
+                  </option>
+
+                  <option value="english">
+                    اللغة الإنجليزية
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="sourceType">
+                  نوع المصدر
+                </label>
+
+                <select id="sourceType">
+
+                  <option value="textbook">
+                    كتاب مدرسي
+                  </option>
+
+                  <option value="progression">
+                    تدرج سنوي
+                  </option>
+
+                  <option value="official">
+                    وثيقة رسمية
+                  </option>
+
+                  <option value="teacher">
+                    وثيقة الأستاذ
+                  </option>
+
+                  <option value="other">
+                    مصدر آخر
+                  </option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="sourceTitle">
+                اسم المصدر
+              </label>
+
+              <input
+                id="sourceTitle"
+                type="text"
+                maxlength="200"
+                placeholder="مثال: كتاب الرياضيات 1AS"
+              >
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="primary-button"
+              id="addSourceButton"
+            >
+              📥 إضافة المصدر
+            </button>
+
+          </form>
+
+
+          <div class="admin-sources-list">
+
+            <h3>
+              المصادر الموجودة
+            </h3>
+
+            <div
+              id="adminSourcesList"
+            >
+              <!-- app.js -->
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Curriculum -->
+
+        <div
+          class="admin-tab-panel"
+          data-admin-panel="curriculum"
+          hidden
+        >
+
+          <div class="admin-panel-heading">
+
+            <h3>
+              بنية المنهج
+            </h3>
+
+            <p>
+              هذه البنية تحدد تنظيم المواد والوحدات داخل الأكاديمية.
+              يجب ربطها لاحقًا بالوثائق الرسمية المعتمدة.
+            </p>
+
+          </div>
+
+          <div
+            id="adminCurriculumTree"
+            class="curriculum-tree"
+          >
+            <!-- app.js -->
+          </div>
+
+        </div>
+
+
+        <!-- Settings -->
+
+        <div
+          class="admin-tab-panel"
+          data-admin-panel="settings"
+          hidden
+        >
+
+          <div class="admin-panel-heading">
+
+            <h3>
+              إعدادات الأكاديمية
+            </h3>
+
+          </div>
+
+          <div class="settings-list">
+
+            <div class="setting-row">
+
+              <div>
+
+                <strong>
+                  وضع المصدر الصارم
+                </strong>
+
+                <p>
+                  لا يسمح للأستاذ الذكي بتقديم معلومة غير مدعومة
+                  عندما يكون السؤال متعلقًا بمصدر متوفر.
+                </p>
+
+              </div>
+
+              <label class="switch">
+
+                <input
+                  type="checkbox"
+                  id="strictSourceMode"
+                  checked
+                >
+
+                <span class="slider"></span>
+
+              </label>
+
+            </div>
+
+
+            <div class="setting-row">
+
+              <div>
+
+                <strong>
+                  الوضع التعليمي
+                </strong>
+
+                <p>
+                  يفضل التوجيه والأسئلة على إعطاء الحل مباشرة.
+                </p>
+
+              </div>
+
+              <label class="switch">
+
+                <input
+                  type="checkbox"
+                  id="guidedLearningMode"
+                  checked
+                >
+
+                <span class="slider"></span>
+
+              </label>
+
+            </div>
+
+
+            <div class="setting-row">
+
+              <div>
+
+                <strong>
+                  الإشعارات التعليمية
+                </strong>
+
+                <p>
+                  تذكير بجلسات المراجعة والاختبارات.
+                </p>
+
+              </div>
+
+              <label class="switch">
+
+                <input
+                  type="checkbox"
+                  id="learningNotifications"
+                  checked
+                >
+
+                <span class="slider"></span>
+
+              </label>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="admin-footer">
+
+          <button
+            type="button"
+            class="secondary-button"
+            id="adminLogoutButton"
+          >
+            تسجيل الخروج
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       MASTERy TEST MODAL
+  ====================================================== -->
+
+  <div
+    id="masteryModal"
+    class="modal-overlay"
+    hidden
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="masteryTitle"
+  >
+
+    <div class="modal-window mastery-window">
+
+      <div class="modal-header">
+
+        <div>
+
+          <span class="modal-kicker">
+            🎯 التحقق من الإتقان
+          </span>
+
+          <h2 id="masteryTitle">
+            اختبار الإتقان
+          </h2>
+
+        </div>
+
+        <button
+          type="button"
+          class="modal-close"
+          id="closeMasteryButton"
+          aria-label="إغلاق"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <div
+        id="masteryTestContainer"
+        class="mastery-test-container"
+      >
+
+        <div class="empty-state">
+
+          <div class="empty-state-icon">
+            🎯
+          </div>
+
+          <h3>
+            الاختبار جاهز
+          </h3>
+
+          <p>
+            سيتم إنشاء أسئلة تقيس الفهم الحقيقي للدرس.
+          </p>
+
+          <button
+            type="button"
+            class="primary-button"
+            id="beginMasteryTest"
+          >
+            ابدأ الاختبار
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       NOTIFICATION
+  ====================================================== -->
+
+  <div
+    id="notificationContainer"
+    class="notification-container"
+    aria-live="polite"
+    aria-atomic="true"
+  ></div>
+
+
+  <!-- =====================================================
+       GLOBAL LOADING
+  ====================================================== -->
+
+  <div
+    id="globalLoading"
+    class="global-loading"
+    hidden
+    aria-hidden="true"
+  >
+
+    <div class="loading-box">
+
+      <div class="loading-spinner"></div>
+
+      <p id="loadingMessage">
+        جارٍ التحميل...
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       APPLICATION
+  ====================================================== -->
+
+  <script
+    type="module"
+    src="./js/app.js">
+  </script>
+
+</body>
+</html>
